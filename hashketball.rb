@@ -295,4 +295,19 @@ def long_name_steals_a_ton?
   player_stats(player_with_the_most_steals)[:steals] == player_stats(player_with_longest_name)[:steals]
 end
 
-long_name_steals_a_ton?
+
+# player by jersey number
+
+def player_by_jersey_number(number)
+
+
+    sorted_get_all_players_by_stat("number").each do |player|
+
+      return player[0] if player[1] == number
+
+
+    end
+
+end
+
+puts player_by_jersey_number(11)
